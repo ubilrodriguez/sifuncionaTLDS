@@ -5,7 +5,7 @@
     "dev": "vite docs",
     "build": "vite build && npm run build:lib",
     "build:lib": "tsc -p .",
-    "serve": "vite",
+    "start": "node server.js",
     "prepare": "npm run build",
     "fmt": "prettier --write 'src/**/*.ts'"
   },
