@@ -1,4 +1,8 @@
-import { siarp_initDrawVRM, siarp_audioStart, siarp_audioPause, siarp_audioResume } from '../../../script.js';
+import { 
+	siarp_initDrawVRM,
+	 siarp_audioStart,
+	  siarp_audioPause,
+	 siarp_audioResume } from '../../../../docs/script';
 function scad_PagePrincipal()
 {
 	createPagePrincipal();
