@@ -2,7 +2,7 @@ import {
 	siarp_initDrawVRM,
 	 siarp_audioStart,
 	  siarp_audioPause,
-	 siarp_audioResume } from '../../../../docs/script';
+	 siarp_audioResume } from '../../../../script.js';
 function scad_PagePrincipal()
 {
 	createPagePrincipal();
@@ -13,7 +13,7 @@ function createPagePrincipal()
 	var contGrnl=new scad_ctrlPanel(document.body,"id","class");
 	contGrnl.addPosition("absolute");
 	contGrnl.sizePanel("100%","100%");
-	contGrnl.addImagePanel("scad/assets/img/scad_demoRegister/fondo.jpg","1");
+	contGrnl.addImagePanel("./scad/assets/img/scad_demoRegister/fondo.jpg","1");
 
 	var contGrnlSon=new scad_ctrlPanel(contGrnl.getHandler(),"scad_DashArea","cam_DashArea");
 	
@@ -31,7 +31,7 @@ function createPagePrincipal()
 	
 	var contBtnStart=new scad_ctrlBoton(contSubMenu.getHandler(),"butt_upAllProc","cam_DashButt");
 	contBtnStart.addTooltip("Empezar");
-	contBtnStart.addImageButton("scad/assets/img/scad_demoRegister/start.png");
+	contBtnStart.addImageButton("./scad/assets/img/scad_demoRegister/start.png");
 	contBtnStart.getHandler().onclick=()=>{
 		contBtnPausa.showButton("inline-block");
 		contBtnStart.hiddenButton();
@@ -41,7 +41,7 @@ function createPagePrincipal()
 		
 	var contBtnPausa=new scad_ctrlBoton(contSubMenu.getHandler(),"butt_stop","cam_DashButt");
 	contBtnPausa.addTooltip("Pausar");
-	contBtnPausa.addImageButton("scad/assets/img/scad_demoRegister/pausa.png");
+	contBtnPausa.addImageButton("./scad/assets/img/scad_demoRegister/pausa.png");
 	contBtnPausa.hiddenButton();
 	
 	contBtnPausa.getHandler().onclick=function()
@@ -53,7 +53,7 @@ function createPagePrincipal()
 	
 	var contBtnRegister=new scad_ctrlBoton(contSubMenu.getHandler(),"butt_upAllProc","cam_DashButt");
 	contBtnRegister.addTooltip("Registrar");
-	contBtnRegister.addImageButton("scad/assets/img/scad_demoRegister/register.png");
+	contBtnRegister.addImageButton("./scad/assets/img/scad_demoRegister/register.png");
 	
 	contBtnRegister.getHandler().onclick=function(){window.open('indexRegister.html', '_self')};
 	
@@ -61,12 +61,12 @@ function createPagePrincipal()
 
 	var contBtnData=new scad_ctrlBoton(contSubMenu.getHandler(),"butt_upAllProc","cam_DashButt");
 	contBtnData.addTooltip("View");
-	contBtnData.addImageButton("scad/assets/img/scad_demoRegister/data.png");
+	contBtnData.addImageButton("./scad/assets/img/scad_demoRegister/data.png");
 	contBtnData.getHandler().onclick=function(){window.open('indexInformation.html', '_self')};
 	
 	var contBtnScreem=new scad_ctrlBoton(contSubMenu.getHandler(),"butt_screemAll","cam_DashButt");
 	contBtnScreem.addTooltip("Screem");
-	contBtnScreem.addImageButton("scad/assets/img/scad_demoRegister/screem.png");
+	contBtnScreem.addImageButton("./scad/assets/img/scad_demoRegister/screem.png");
 	contBtnScreem.getHandler().onclick=function(){contSonBody.fullScreen()};
 	
 	siarp_initDrawVRM();
